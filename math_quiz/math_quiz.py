@@ -1,4 +1,5 @@
 import random
+import unittest
 
 class IntegerRequireException(Exception):
     print("Please provide integer value ")
@@ -42,9 +43,9 @@ def performOperation(firstNumber, secondNumber, operation):
     """
     problem = f"{firstNumber} {operation} {secondNumber}"
     if operation == '+':
-        result = firstNumber - secondNumber
-    elif operation == '-': 
         result = firstNumber + secondNumber
+    elif operation == '-': 
+        result = firstNumber - secondNumber
     else: 
         result = firstNumber * secondNumber
     return problem, result

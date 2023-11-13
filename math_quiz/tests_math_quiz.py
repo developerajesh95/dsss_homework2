@@ -13,17 +13,29 @@ class TestMathGame(unittest.TestCase):
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_operatorSelection(self):
-        # TODO
+        # test for random generated operator
+        operators = ['+', '-', '*']
+        for _ in range(1000):
+             rand_operator = operatorSelection()
+             self.assertTrue(rand_operator, operators)
         pass
 
     def test_performOperation(self):
             test_cases = [
                 (5, 2, '+', '5 + 2', 7),
-                ''' TODO add more test cases here '''
+                (6, 6, '*', '6 * 6', 36),
+                (8, 6, '-', '8 - 6', 2),
+                (9, 7, '+', '9 + 7', 16),
+                (4, 7, '*', '4 * 7', 28),
             ]
 
             for num1, num2, operator, expected_problem, expected_answer in test_cases:
-                # TODO
+                
+                test_question, test_answer = performOperation(num1, num2, operator)
+
+                #check if the result matches with expected result
+                self.assertEqual(test_question, expected_problem)
+                self.assertEqual(test_answer, expected_answer)
                 pass
 
 if __name__ == "__main__":
