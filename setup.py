@@ -7,6 +7,11 @@ setup(
     author = "Rajesh Kumar",
     author_email = "developerajesh95@gmail.com",
     url = "https://github.com/developerajesh95/dsss_homework2/",
+    entry_points = {
+        'console_scripts': [
+            'rackfocus=rackfocus.run:main'
+        ]
+    },
     packages=["math_quiz"],
     install_requires=[],
 )
